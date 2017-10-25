@@ -1,0 +1,11 @@
+{{#partial "content"}}
+    <h1>Edit post below...</h1>
+    <form action="/edit/{{blogs.slug}}" method="post">
+        <input type="text" placeholder="title" name="title">
+        <input type="text" placeholder="entry" name="entry">
+        <button>post</button>
+    </form>
+    <a href="/">home page</a>
+{{/partial}}
+
+{{>base.hbs}}

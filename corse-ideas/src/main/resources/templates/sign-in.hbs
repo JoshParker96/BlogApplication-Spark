@@ -1,0 +1,12 @@
+{{#partial "content"}}
+<h1>You must be logged in to add or edit a post</h1>
+<form action="/sign-in" method="post">
+    <input type="text" placeholder="password" name="username">
+    <button>Submit</button>
+    <br>
+    <br>
+    <a href="/">home page</a>
+</form>
+{{/partial}}
+
+{{> base.hbs}}
