@@ -1,0 +1,23 @@
+{{#partial "content"}}
+<h1 xmlns="http://www.w3.org/1999/html">Detail Page</h1>
+<ul>
+    <li>
+        <h1>{{blogs.title}}</h1>
+        <p>{{blogs.entry}}<br> -post time: {{blogs.date}}</p>
+        <p>friends comments: {{blogs.comments}}</p>
+        <form action="/addComment/{{blogs.slug}}" method="post">
+            <input type="text" placeholder="name" name="username">
+            <input type="text" placeholder="comment" name="comment">
+            <button>comment</button>
+        </form>
+    </li>
+</ul>
+
+<a href="/edit/{{blogs.slug}}">edit this blog</a>
+<br>
+<a href="/new">new blog</a>
+<br>
+<a href="/">home</a>
+{{/partial}}
+
+{{> base.hbs}}

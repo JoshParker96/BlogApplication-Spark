@@ -1,0 +1,17 @@
+{{#partial "content"}}
+<h1 xmlns="http://www.w3.org/1999/html">Home Page</h1>
+
+    <ul>
+        {{#each blogs}}
+        <li>
+            <a href="/detail/{{slug}}">{{title}}</a>
+            <br>
+            {{date}}
+        </li>
+        {{/each}}
+    </ul>
+
+    <a href="/new">new blog</a>
+{{/partial}}
+
+{{> base.hbs}}
