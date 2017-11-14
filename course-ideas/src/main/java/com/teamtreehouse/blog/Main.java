@@ -7,6 +7,7 @@ import com.teamtreehouse.blog.model.CommentEntry;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;
+import spark.Spark;
 import spark.template.handlebars.HandlebarsTemplateEngine;
 
 import javax.xml.stream.events.Comment;
@@ -22,6 +23,8 @@ public class Main {
     public static void main(String[] args) {
 
         BlogEntriesDAO blogDao = new SimpleBlogEntriesDAO();
+
+        Spark.staticFileLocation("public");
 
         before("/new", (rq, rs) -> {
             if (rq.cookie("admin") == null) {

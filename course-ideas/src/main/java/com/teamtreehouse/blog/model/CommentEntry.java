@@ -21,6 +21,6 @@ public class CommentEntry {
 
     @Override
     public String toString() {
-        return this.name + ": " + this.comment;
+        return this.name + "'s comment: " + this.comment;
     }
 }
