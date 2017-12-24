@@ -62,7 +62,7 @@ public class Main {
 
         get("/detail/:slug", (rq, rs) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("blogs", blogDao.findSlugByEntry(rq.params("slug")));
+            model.put("blog", blogDao.findSlugByEntry(rq.params("slug")));
             return new ModelAndView(model, "detail.hbs");
         }, new HandlebarsTemplateEngine());
 
@@ -90,7 +90,7 @@ public class Main {
 
         get("/edit/:slug", (rq, rs) -> {
             Map<String, Object> model = new HashMap<>();
-            model.put("blogs", blogDao.findSlugByEntry(rq.params("slug")));
+            model.put("blog", blogDao.findSlugByEntry(rq.params("slug")));
             return new ModelAndView(model, "edit.hbs");
         }, new HandlebarsTemplateEngine());
 

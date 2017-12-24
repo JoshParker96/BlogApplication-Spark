@@ -2,10 +2,10 @@
 <h1 xmlns="http://www.w3.org/1999/html">Detail Page</h1>
 <ul>
     <li>
-        <h1>{{blogs.title}}</h1>
-        <p>{{blogs.entry}}<br> -post time: {{blogs.date}}</p>
-        <p>friends comments: {{blogs.comments}}</p>
-        <form action="/addComment/{{blogs.slug}}" method="post">
+        <h1>{{blog.title}}</h1>
+        <p>{{blog.entry}}<br> -post time: {{blog.date}}</p>
+        <p>friends comments: {{blog.comments}}</p>
+        <form action="/addComment/{{blog.slug}}" method="post">
             <input type="text" placeholder="name" name="username">
             <input type="text" placeholder="comment" name="comment">
             <button>comment</button>
@@ -13,7 +13,7 @@
     </li>
 </ul>
 
-<a href="/edit/{{blogs.slug}}">edit this blog</a>
+<a href="/edit/{{blog.slug}}">edit this blog</a>
 <br>
 <a href="/new">new blog</a>
 <br>
